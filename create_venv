@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [[ -e venv ]]; then
+    rm -rf venv
+fi
+
+virtualenv -p python3 venv
+
+pushd venv; . bin/activate; popd
+
+echo "//"
+echo "// finishing"
+echo "//"
+echo
+echo "now do this:"
+echo "  pushd venv; . bin/activate; popd"
+echo "  python -m solent.client.games.sandbox"
+echo
+
